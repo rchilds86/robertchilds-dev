@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert Childs — Developer & Builder</title>
+  <meta name="description" content="Developer and tinkerer based in Durham, NC. I build iOS apps, web tools, and whatever else solves a problem I have." />
+  <meta property="og:title" content="Robert Childs — Developer & Builder" />
+  <meta property="og:description" content="Developer and tinkerer based in Durham, NC. Building iOS apps and web tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://robertchilds.dev" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Robert Childs — Developer & Builder" />
+  <meta name="twitter:description" content="Developer and tinkerer based in Durham, NC." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23185FA5'/><text y='.9em' font-size='65' x='12' font-family='serif' fill='white'>RC</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text-primary: #1a1a1a;
+      --text-secondary: #5f5e5a;
+      --text-muted: #888780;
+      --text-accent: #185FA5;
+      --surface-0: #f4f3f0;
+      --surface-1: #f9f8f6;
+      --surface-2: #ffffff;
+      --border: rgba(0,0,0,0.1);
+      --border-strong: rgba(0,0,0,0.18);
+      --border-accent: rgba(24,95,165,0.25);
+      --bg-accent: #e6f1fb;
+      --radius: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #f0efe9;
+        --text-secondary: #a0a09a;
+        --text-muted: #666662;
+        --text-accent: #5ba3e0;
+        --surface-0: #141413;
+        --surface-1: #1e1d1b;
+        --surface-2: #252422;
+        --border: rgba(255,255,255,0.08);
+        --border-strong: rgba(255,255,255,0.14);
+        --border-accent: rgba(91,163,224,0.2);
+        --bg-accent: #0c3050;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface-0);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--surface-2);
+      border-left: 0.5px solid var(--border);
+      border-right: 0.5px solid var(--border);
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--surface-2);
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .hero {
+      padding: 4rem 2rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 44px;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--text-accent);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 420px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--text-primary);
+      color: var(--surface-2);
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: opacity 0.15s;
+    }
+
+    .btn-primary:hover { opacity: 0.85; }
+
+    .btn-ghost {
+      border: 0.5px solid var(--border-strong);
+      color: var(--text-secondary);
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 13px;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-primary);
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: var(--bg-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px;
+      color: var(--text-accent);
+      border: 0.5px solid var(--border-accent);
+      flex-shrink: 0;
+    }
+
+    .divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 0 2rem;
+    }
+
+    section { padding: 2.5rem 2rem; }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .card {
+      background: var(--surface-1);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s;
+    }
+
+    .card:hover { border-color: var(--border-strong); }
+
+    .card-icon {
+      font-size: 22px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-sub {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .about-text p + p { margin-top: 1rem; }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 0.3rem 0.75rem;
+      border-radius: 99px;
+      background: var(--surface-1);
+      border: 0.5px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    footer {
+      padding: 1.5rem 2rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .footer-text a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer-text a:hover { color: var(--text-secondary); }
+
+    @media (max-width: 600px) {
+      .hero { grid-template-columns: 1fr; }
+      .avatar { display: none; }
+      h1 { font-size: 32px; }
+      .about-grid { grid-template-columns: 1fr; }
+      nav { padding: 1rem 1.25rem; }
+      .hero, section { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .divider { margin: 0 1.25rem; }
+      footer { padding: 1.25rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a class="logo" href="/">Robert Childs</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <h1>I build things<br>I <em>wish</em> existed.</h1>
+        <p class="hero-sub">Developer and tinkerer based in Durham, NC. I spend my spare time building iOS apps, web tools, and whatever else solves a problem I have. Mostly Swift and JavaScript.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#projects">See my projects</a>
+          <a class="btn-ghost" href="#contact">Say hello</a>
+        </div>
+      </div>
+      <div class="avatar" aria-hidden="true">RC</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="projects">
+      <p class="section-label">Projects</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <div class="card-title">HabitCrawler</div>
+          <div class="card-sub">iOS habit tracker with RPG progression. Built with SwiftUI and SwiftData.</div>
+          <div class="card-tag">🍎 TestFlight beta</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚽</div>
+          <div class="card-title">GoalTracker</div>
+          <div class="card-sub">Family sports schedule and goalkeeper save stats by zone.</div>
+          <div class="card-tag">💻 In development</div>
+        </div>
+        <a class="card" href="https://portfolio.robertchilds.dev">
+          <div class="card-icon">📊</div>
+          <div class="card-title">Portfolio Dashboard</div>
+          <div class="card-sub">Live project tracker built on a REST API. React and Node.js.</div>
+          <div class="card-tag">🔒 Access restricted</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="about">
+      <p class="section-label">About</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I grew up in South Florida and landed in Durham, NC in 2014. I've been writing code in some form since before I had a degree for it — which I eventually got in Software Design from Durham Tech.</p>
+          <p>Outside of coding I'm into hockey, bourbon, cooking, and watching my kids play sports.</p>
+        </div>
+        <div>
+          <p class="section-label" style="margin-bottom: 1rem;">Tools I reach for</p>
+          <div class="pills">
+            <span class="pill">Swift</span>
+            <span class="pill">SwiftUI</span>
+            <span class="pill">React</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">Tailwind</span>
+            <span class="pill">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <p style="font-size: 15px; color: var(--text-secondary);">Want to reach out? Email me at <a href="mailto:robertchilds86@icloud.com" style="color: var(--text-accent); text-decoration: none;">robertchilds86@icloud.com</a></p>
+    </section>
+
+    <footer>
+      <span class="footer-text">© 2026 Robert Childs · Durham, NC</span>
+      <span class="footer-text"><a href="mailto:robertchilds86@icloud.com">robertchilds86@icloud.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
