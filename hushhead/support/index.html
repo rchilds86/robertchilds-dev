@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support | HushHead: Migraine Log</title>
 <meta name="description" content="Support and FAQ for HushHead: Migraine Log, a local-first migraine diary for iPhone.">
+<link rel="icon" type="image/png" href="/apps/icons/hushhead.png">
+<link rel="apple-touch-icon" href="/apps/icons/hushhead.png">
 <style>
   :root {
     --bg: #faf8f6; --card: #ffffff; --text: #23201f; --muted: #6b6461;
-    --accent: #b3383c; --accent-soft: #f6e6e5; --border: #ebe5e2;
+    --accent: #a8612a; --accent-soft: #f6ece3; --border: #ebe5e2; --on-accent: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #141112; --card: #1d191a; --text: #eee7e5; --muted: #a69c99;
-      --accent: #e0686b; --accent-soft: #2c1c1d; --border: #2e2829;
+      --accent: #d99a5b; --accent-soft: #2a1f17; --border: #2e2829; --on-accent: #1a1209;
     }
   }
   * { box-sizing: border-box; }
@@ -25,17 +27,14 @@
   .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 64px; }
   header { margin-bottom: 28px; }
   .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-  .mark {
-    width: 44px; height: 44px; border-radius: 11px; background: var(--accent);
-    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px;
-  }
+  .mark { width: 48px; height: 48px; border-radius: 22.5%; display: block; box-shadow: 0 1px 2px rgba(0,0,0,.18), 0 6px 18px rgba(0,0,0,.14); }
   .brand span { font-weight: 600; font-size: 18px; }
   nav { display: flex; gap: 8px; margin-bottom: 28px; }
   nav a {
     text-decoration: none; color: var(--muted); padding: 6px 14px; border-radius: 999px;
     border: 1px solid var(--border); font-size: 15px;
   }
-  nav a.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  nav a.active { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
   h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
   .lede { color: var(--muted); margin: 0; }
   .contact {
@@ -43,7 +42,7 @@
   }
   .contact h2 { margin-top: 0; }
   .btn {
-    display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+    display: inline-block; background: var(--accent); color: var(--on-accent); text-decoration: none;
     padding: 10px 18px; border-radius: 10px; font-weight: 600; margin: 6px 0 12px;
   }
   .meta { font-size: 15px; color: var(--muted); }
@@ -76,7 +75,7 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><div class="mark">H</div><span>HushHead: Migraine Log</span></div>
+    <div class="brand"><img class="mark" src="/apps/icons/hushhead.png" alt="" width="48" height="48"><span>HushHead: Migraine Log</span></div>
     <nav>
       <a href="../privacy/">Privacy</a>
       <a href="../support/" class="active">Support</a>
@@ -145,7 +144,7 @@
     <p>HushHead is a personal tracking tool meant to help you organize symptom logs for conversations with your doctor or neurologist. It does not offer medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional regarding medical decisions or urgent symptoms.</p>
   </div>
 
-  <footer>&copy; 2026 Robert Childs. All rights reserved.</footer>
+  <footer>&copy; 2026 Robert Childs. All rights reserved. &middot; <a href="/apps/">More apps</a></footer>
 </div>
 </body>
 </html>
