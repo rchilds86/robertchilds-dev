@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | HushHead: Migraine Log</title>
+<meta name="description" content="Support and FAQ for HushHead: Migraine Log, a local-first migraine diary for iPhone.">
+<style>
+  :root {
+    --bg: #faf8f6; --card: #ffffff; --text: #23201f; --muted: #6b6461;
+    --accent: #b3383c; --accent-soft: #f6e6e5; --border: #ebe5e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141112; --card: #1d191a; --text: #eee7e5; --muted: #a69c99;
+      --accent: #e0686b; --accent-soft: #2c1c1d; --border: #2e2829;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 64px; }
+  header { margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 11px; background: var(--accent);
+    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px;
+  }
+  .brand span { font-weight: 600; font-size: 18px; }
+  nav { display: flex; gap: 8px; margin-bottom: 28px; }
+  nav a {
+    text-decoration: none; color: var(--muted); padding: 6px 14px; border-radius: 999px;
+    border: 1px solid var(--border); font-size: 15px;
+  }
+  nav a.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .lede { color: var(--muted); margin: 0; }
+  .contact {
+    background: var(--accent-soft); border-radius: 14px; padding: 22px 24px; margin: 8px 0 36px;
+  }
+  .contact h2 { margin-top: 0; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+    padding: 10px 18px; border-radius: 10px; font-weight: 600; margin: 6px 0 12px;
+  }
+  .meta { font-size: 15px; color: var(--muted); }
+  h2 { font-size: 22px; margin: 0 0 12px; letter-spacing: -0.01em; }
+  details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 0 22px; margin-top: 12px;
+  }
+  summary {
+    cursor: pointer; font-weight: 600; padding: 18px 0; list-style: none;
+    display: flex; justify-content: space-between; gap: 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "\2212"; }
+  .answer { padding-bottom: 18px; }
+  p { margin: 0 0 10px; }
+  p:last-child, ol:last-child { margin-bottom: 0; }
+  ol { padding-left: 22px; margin: 0; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .notice {
+    border-left: 4px solid var(--accent); background: var(--card); border-radius: 10px;
+    padding: 18px 22px; margin-top: 36px;
+  }
+  .notice h2 { font-size: 18px; margin-bottom: 8px; }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="mark">H</div><span>HushHead: Migraine Log</span></div>
+    <nav>
+      <a href="../privacy/">Privacy</a>
+      <a href="../support/" class="active">Support</a>
+    </nav>
+    <h1>Support</h1>
+    <p class="lede">If you have a question, found a bug, or want to suggest an improvement, reach out anytime. We read every message.</p>
+  </header>
+
+  <div class="contact">
+    <h2>Contact Support</h2>
+    <a class="btn" href="mailto:poles_maned_1e@icloud.com?subject=HushHead%20Support">Email Support</a>
+    <p class="meta"><strong>Email:</strong> poles_maned_1e@icloud.com<br>
+    <strong>Typical Response Time:</strong> Within 1 to 2 business days</p>
+    <p class="meta">When reporting an issue, it helps to include your iPhone model, iOS version, and a brief description of what happened.</p>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>How do I turn on Red Light ("Darkroom") Mode?</summary>
+    <div class="answer">
+      <p>Tap the <strong>Red Shift / Red Mode</strong> pill in the top-right corner of the <strong>Log</strong>, <strong>Patterns</strong>, or <strong>Report</strong> screens. Your preference stays active across tabs so you can log attacks in low-light environments without bright screen glare.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How do I track how long a migraine lasts?</summary>
+    <div class="answer">
+      <ol>
+        <li>Tap <strong>Log Attack</strong> on the <strong>Log</strong> tab when an attack starts.</li>
+        <li>While an attack is ongoing, an active episode banner appears on the <strong>Log</strong> screen showing elapsed duration.</li>
+        <li>Tap <strong>End Attack</strong> when your migraine resolves, or tap <strong>Adjust...</strong> to set an exact start or end time.</li>
+        <li>You can also tap any past episode in the <strong>Patterns</strong> tab to edit its start/end times, symptoms, triggers, or notes.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details>
+    <summary>Why does HushHead ask for Location permission?</summary>
+    <div class="answer">
+      <p>HushHead uses <strong>While Using the App</strong> location access to fetch live local barometric pressure (hPa) and 6-hour pressure changes through <strong>Apple WeatherKit</strong>.</p>
+      <p>If you prefer not to share location, you can decline the permission or manage it anytime under <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; HushHead</strong>. All manual logging and PDF reporting features continue to work normally.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How do I export a report for my doctor or neurologist?</summary>
+    <div class="answer">
+      <ol>
+        <li>Open the <strong>Report</strong> tab.</li>
+        <li>Choose your timeframe (<strong>30 Days</strong>, <strong>Last 3 Months</strong>, or <strong>6 Months</strong>).</li>
+        <li>Tap <strong>Generate Clinical PDF</strong>, then tap <strong>Share PDF with Doctor</strong> to print, save to Files, or send via Mail or Messages.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details>
+    <summary>Where is my migraine data stored?</summary>
+    <div class="answer">
+      <p>All of your migraine logs, medications, and notes are stored locally on your iPhone. HushHead does not require an account and does not upload your health entries to external servers. See the <a href="../privacy/">Privacy Policy</a> for details.</p>
+    </div>
+  </details>
+
+  <div class="notice">
+    <h2>Medical Notice</h2>
+    <p>HushHead is a personal tracking tool meant to help you organize symptom logs for conversations with your doctor or neurologist. It does not offer medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional regarding medical decisions or urgent symptoms.</p>
+  </div>
+
+  <footer>&copy; 2026 Robert Childs. All rights reserved.</footer>
+</div>
+</body>
+</html>

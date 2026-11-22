@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | HushHead: Migraine Log</title>
+<meta name="description" content="Privacy Policy for HushHead: Migraine Log, a local-first migraine diary for iPhone.">
+<style>
+  :root {
+    --bg: #faf8f6; --card: #ffffff; --text: #23201f; --muted: #6b6461;
+    --accent: #b3383c; --accent-soft: #f6e6e5; --border: #ebe5e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141112; --card: #1d191a; --text: #eee7e5; --muted: #a69c99;
+      --accent: #e0686b; --accent-soft: #2c1c1d; --border: #2e2829;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 64px; }
+  header { margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 11px; background: var(--accent);
+    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px;
+  }
+  .brand span { font-weight: 600; font-size: 18px; }
+  nav { display: flex; gap: 8px; margin-bottom: 28px; }
+  nav a {
+    text-decoration: none; color: var(--muted); padding: 6px 14px; border-radius: 999px;
+    border: 1px solid var(--border); font-size: 15px;
+  }
+  nav a.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .date { color: var(--muted); font-size: 15px; margin: 0; }
+  .intro {
+    background: var(--accent-soft); border-radius: 14px; padding: 18px 20px; margin: 28px 0 8px;
+  }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 22px 24px; margin-top: 16px;
+  }
+  h2 { font-size: 20px; margin: 0 0 10px; letter-spacing: -0.01em; }
+  p { margin: 0 0 10px; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 20px; margin: 8px 0 10px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="mark">H</div><span>HushHead: Migraine Log</span></div>
+    <nav>
+      <a href="../privacy/" class="active">Privacy</a>
+      <a href="../support/">Support</a>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="date">Effective Date: November 20, 2026</p>
+  </header>
+
+  <div class="intro">
+    <p>HushHead: Migraine Log ("HushHead," "we," "our," or "us") is built around a privacy-first, local-first design. This Privacy Policy explains what information the app handles, how it is used, and the choices you have.</p>
+  </div>
+
+  <section>
+    <h2>1. Local-First Health &amp; Migraine Logs</h2>
+    <p>HushHead does not require you to create an account, log in, or provide your name or email address to use the app.</p>
+    <ul>
+      <li><strong>On-Device Storage:</strong> All migraine episodes, severity ratings, symptoms, head locations, trigger notes, medication entries, and app preferences are stored locally on your iOS device using Apple's SwiftData framework.</li>
+      <li><strong>No Developer Cloud Servers:</strong> We do not operate external servers that collect, store, or view your personal migraine diary or health notes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Location &amp; Barometric Pressure (Apple WeatherKit)</h2>
+    <p>If you grant optional <strong>While Using the App</strong> location permission, HushHead uses your device's location coordinates solely to retrieve local atmospheric pressure (hPa) and 6-hour barometric pressure trends via <strong>Apple WeatherKit</strong>.</p>
+    <ul>
+      <li>Location requests are made on-demand to fetch weather context for your migraine logs.</li>
+      <li>We do not maintain a location history log on external servers, sell location data, or use location for advertising.</li>
+      <li>HushHead remains fully functional if you decline or disable location access in iOS Settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Clinical PDF Exports &amp; Sharing</h2>
+    <p>When you generate a clinical summary PDF in the <strong>Report</strong> tab, the document is rendered locally on your device. That PDF is only shared if and when you explicitly choose to export or send it using the standard iOS Share Sheet (for example, saving to Apple Files, printing, or emailing it to your healthcare provider). Once exported, the file is governed by the privacy practices of the service or recipient you choose.</p>
+  </section>
+
+  <section>
+    <h2>4. Analytics, Advertising &amp; Third-Party Tracking</h2>
+    <ul>
+      <li><strong>No Ads:</strong> HushHead contains no third-party advertising SDKs.</li>
+      <li><strong>No Cross-App Tracking:</strong> We do not track you across other companies' apps or websites, and we do not collect the Apple Advertising Identifier (IDFA).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Data Retention &amp; Deletion</h2>
+    <p>Because your migraine data resides locally on your device:</p>
+    <ul>
+      <li>You can edit or delete individual migraine entries directly inside the app at any time.</li>
+      <li>Deleting the HushHead app from your device permanently removes its local database (unless included in your personal encrypted iCloud/device backups managed by Apple).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Children's Privacy</h2>
+    <p>HushHead is intended for general audiences and is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+  </section>
+
+  <section>
+    <h2>7. Medical Disclaimer</h2>
+    <p>HushHead is a personal symptom logging and reporting utility designed for informational purposes and to assist discussions with a qualified healthcare professional. It does not provide medical advice, diagnosis, or treatment.</p>
+  </section>
+
+  <section>
+    <h2>8. Changes to This Policy</h2>
+    <p>If we add new features in future updates (such as optional cloud sync or subscriptions), we will update this Privacy Policy and revise the Effective Date above prior to releasing those changes.</p>
+  </section>
+
+  <section>
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or HushHead's privacy practices, please contact:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:poles_maned_1e@icloud.com">poles_maned_1e@icloud.com</a></li>
+    </ul>
+  </section>
+
+  <footer>&copy; 2026 Robert Childs. All rights reserved.</footer>
+</div>
+</body>
+</html>
