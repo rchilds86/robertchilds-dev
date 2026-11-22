@@ -1,384 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robert Childs — Developer & Builder</title>
-  <meta name="description" content="Developer and tinkerer based in Durham, NC. I build iOS apps, web tools, and whatever else solves a problem I have." />
-  <meta property="og:title" content="Robert Childs — Developer & Builder" />
-  <meta property="og:description" content="Developer and tinkerer based in Durham, NC. Building iOS apps and web tools." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://robertchilds.dev" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Robert Childs — Developer & Builder" />
-  <meta name="twitter:description" content="Developer and tinkerer based in Durham, NC." />
-  <link rel="icon" type="image/png" href="RCDevlogo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robert Childs | iOS Apps &amp; Developer</title>
+<meta name="description" content="Robert Childs is a developer in Durham, NC building focused, private iOS apps: Duo Dash, HushHead, PonderDeck, Coach Duo, and Eaves.">
+<link rel="canonical" href="https://robertchilds.dev/">
+<meta property="og:title" content="Robert Childs | iOS Apps &amp; Developer">
+<meta property="og:description" content="Focused, private iOS apps built in Durham, NC.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertchilds.dev/">
+<meta property="og:image" content="https://robertchilds.dev/assets/logo-512.png">
+<meta name="theme-color" content="#0e0e10">
+<link rel="icon" type="image/png" href="/assets/logo-128.png">
+<link rel="apple-touch-icon" href="/assets/logo-512.png">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .hero { background: var(--ink); color: var(--on-ink); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; width: 760px; height: 760px; right: -220px; top: -260px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,90,54,.30), rgba(255,45,138,.12) 55%, transparent); pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; gap: 56px; align-items: center; padding-top: 96px; padding-bottom: 104px; }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.15fr .85fr; } }
+  .hero .eyebrow { color: var(--on-ink-muted); }
+  .hero h1 { font: 600 clamp(2.7rem, 6.4vw, 4.6rem)/1.02 var(--serif); letter-spacing: -.03em; margin: 0 0 22px; }
+  .hero p.sub { color: var(--on-ink-muted); font-size: 1.15rem; max-width: 46ch; margin: 0 0 32px; }
+  .hero .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .shelf { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; max-width: 380px; justify-self: center; width: 100%; }
+  .shelf a { display: block; width: calc((100% - 44px) / 3); transition: transform .2s; }
+  .shelf a:hover { transform: translateY(-4px) rotate(-2deg); }
+  .shelf .app-icon { width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+  .shelf .tag { width: 100%; text-align: center; color: var(--on-ink-muted); font-size: .85rem; margin: 6px 0 0; }
+  @media (max-width: 899px) { .shelf { max-width: 300px; } }
 
-    :root {
-      --text-primary: #1a1a1a;
-      --text-secondary: #5f5e5a;
-      --text-muted: #888780;
-      --text-accent: #185FA5;
-      --surface-0: #f4f3f0;
-      --surface-1: #f9f8f6;
-      --surface-2: #ffffff;
-      --border: rgba(0,0,0,0.1);
-      --border-strong: rgba(0,0,0,0.18);
-      --border-accent: rgba(24,95,165,0.25);
-      --bg-accent: #e6f1fb;
-      --radius: 8px;
-    }
+  .apps-row { list-style: none; margin: 40px 0 36px; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .apps-row a { display: flex; flex-direction: column; gap: 12px; height: 100%; padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; transition: border-color .15s, transform .15s; }
+  .apps-row a:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+  .apps-row .app-icon { width: 64px; height: 64px; }
+  .apps-row h3 { font: 600 1.05rem/1.25 var(--sans); margin: 4px 0 0; }
+  .apps-row p { color: var(--muted); font-size: .92rem; line-height: 1.5; margin: 0; flex: 1; }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-primary: #f0efe9;
-        --text-secondary: #a0a09a;
-        --text-muted: #666662;
-        --text-accent: #5ba3e0;
-        --surface-0: #141413;
-        --surface-1: #1e1d1b;
-        --surface-2: #252422;
-        --border: rgba(255,255,255,0.08);
-        --border-strong: rgba(255,255,255,0.14);
-        --border-accent: rgba(91,163,224,0.2);
-        --bg-accent: #0c3050;
-      }
-    }
+  .values { border-top: 1px solid var(--line); }
+  .values ul { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 20px; }
+  @media (min-width: 800px) { .values ul { grid-template-columns: repeat(3, 1fr); } }
+  .values li { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+  .values .n { font: 600 2rem/1 var(--serif); margin-bottom: 14px; }
+  .values h3 { font: 600 1.1rem/1.3 var(--sans); margin: 0 0 6px; }
+  .values p { color: var(--muted); margin: 0; font-size: .97rem; }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--surface-0);
-      color: var(--text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--surface-2);
-      border-left: 0.5px solid var(--border);
-      border-right: 0.5px solid var(--border);
-      min-height: 100vh;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 2rem;
-      border-bottom: 0.5px solid var(--border);
-      position: sticky;
-      top: 0;
-      background: var(--surface-2);
-      z-index: 10;
-    }
-
-    .logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 18px;
-      color: var(--text-primary);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 13px;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.15s;
-    }
-
-    .nav-links a:hover { color: var(--text-primary); }
-
-    .hero {
-      padding: 4rem 2rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 44px;
-      line-height: 1.1;
-      margin-bottom: 1.25rem;
-      color: var(--text-primary);
-    }
-
-    h1 em {
-      font-style: italic;
-      color: var(--text-accent);
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.75;
-      margin-bottom: 2rem;
-      max-width: 420px;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--text-primary);
-      color: var(--surface-2);
-      padding: 0.6rem 1.25rem;
-      border-radius: var(--radius);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      font-family: 'DM Sans', sans-serif;
-      transition: opacity 0.15s;
-    }
-
-    .btn-primary:hover { opacity: 0.85; }
-
-    .btn-ghost {
-      border: 0.5px solid var(--border-strong);
-      color: var(--text-secondary);
-      padding: 0.6rem 1.25rem;
-      border-radius: var(--radius);
-      font-size: 13px;
-      text-decoration: none;
-      font-family: 'DM Sans', sans-serif;
-      transition: border-color 0.15s, color 0.15s;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--text-secondary);
-      color: var(--text-primary);
-    }
-
-    .avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: var(--bg-accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'DM Serif Display', serif;
-      font-size: 48px;
-      color: var(--text-accent);
-      border: 0.5px solid var(--border-accent);
-      flex-shrink: 0;
-    }
-
-    .divider {
-      height: 0.5px;
-      background: var(--border);
-      margin: 0 2rem;
-    }
-
-    section { padding: 2.5rem 2rem; }
-
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .card {
-      background: var(--surface-1);
-      border: 0.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-decoration: none;
-      display: block;
-      transition: border-color 0.15s;
-    }
-
-    .card:hover { border-color: var(--border-strong); }
-
-    .card-icon {
-      font-size: 22px;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-primary);
-      margin-bottom: 0.35rem;
-    }
-
-    .card-sub {
-      font-size: 12px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .card-tag {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 0.85rem;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: start;
-    }
-
-    .about-text {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.8;
-    }
-
-    .about-text p + p { margin-top: 1rem; }
-
-    .pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .pill {
-      font-size: 12px;
-      padding: 0.3rem 0.75rem;
-      border-radius: 99px;
-      background: var(--surface-1);
-      border: 0.5px solid var(--border);
-      color: var(--text-secondary);
-    }
-
-    footer {
-      padding: 1.5rem 2rem;
-      border-top: 0.5px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-text {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .footer-text a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    .footer-text a:hover { color: var(--text-secondary); }
-
-    @media (max-width: 600px) {
-      .hero { grid-template-columns: 1fr; }
-      .avatar { display: none; }
-      h1 { font-size: 32px; }
-      .about-grid { grid-template-columns: 1fr; }
-      nav { padding: 1rem 1.25rem; }
-      .hero, section { padding-left: 1.25rem; padding-right: 1.25rem; }
-      .divider { margin: 0 1.25rem; }
-      footer { padding: 1.25rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-    }
-  </style>
+  .about { border-top: 1px solid var(--line); }
+  .about .grid { display: grid; gap: 40px; margin-top: 8px; }
+  @media (min-width: 800px) { .about .grid { grid-template-columns: 1.2fr .8fr; } }
+  .about .text p { color: var(--muted); font-size: 1.05rem; margin: 0 0 16px; max-width: 58ch; }
+  .about h3 { font: 600 .78rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 6px 0 16px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .pills li { font-size: .88rem; padding: 7px 13px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); }
+</style>
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <a class="logo" href="/">Robert Childs</a>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="home" href="/"><img src="/assets/logo-128.png" alt="" width="34" height="34">Robert Childs</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/apps/">Apps</a></li>
+        <li><a href="/#about">About</a></li>
       </ul>
     </nav>
+  </div>
+</header>
 
-    <section class="hero">
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
       <div>
-        <h1>I build things<br>I <em>wish</em> existed.</h1>
-        <p class="hero-sub">Developer and tinkerer based in Durham, NC. I spend my spare time building iOS apps, web tools, and whatever else solves a problem I have.</p>
-        <div class="cta-row">
-          <a class="btn-primary" href="#projects">See my projects</a>
+        <p class="eyebrow">iOS developer &middot; Durham, NC</p>
+        <h1>I build the apps<br>I <span class="grad-text">wish existed.</span></h1>
+        <p class="sub">Small, focused iPhone apps that respect your privacy, skip the subscriptions where they can, and do one thing really well.</p>
+        <div class="cta">
+          <a class="btn btn-light" href="/apps/">See the apps <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-outline" href="#about">About me</a>
         </div>
       </div>
-      <div class="avatar" style="background: #0a0a0a; border-color: #333;" aria-hidden="true"><img src="logoRC_dev.png" alt="RC logo" style="width: 140px; height: 140px; object-fit: contain; mix-blend-mode: lighten;" /></div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="projects">
-      <p class="section-label">Projects</p>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">📱</div>
-          <div class="card-title">HabitCrawler</div>
-          <div class="card-sub">iOS habit tracker with RPG progression. Built with SwiftUI and SwiftData.</div>
-          <div class="card-tag">🍎 TestFlight beta</div>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚽</div>
-          <div class="card-title">GoalTracker</div>
-          <div class="card-sub">Family sports schedule and goalkeeper save stats by zone.</div>
-          <div class="card-tag">💻 In development</div>
-        </div>
-        <a class="card" href="https://portfolio.robertchilds.dev">
-          <div class="card-icon">📊</div>
-          <div class="card-title">Portfolio Dashboard</div>
-          <div class="card-sub">Live project tracker built on a REST API. React and Node.js.</div>
-          <div class="card-tag">🔒 Access restricted</div>
-        </a>
+      <div class="shelf">
+        <a href="/apps/#duo-dash"><img class="app-icon" src="/apps/icons/duo-dash.svg" alt="Duo Dash" width="112" height="112"></a>
+        <a href="/apps/#hushhead"><img class="app-icon" src="/apps/icons/hushhead.svg" alt="HushHead" width="112" height="112"></a>
+        <a href="/apps/#ponderdeck"><img class="app-icon" src="/apps/icons/ponderdeck.svg" alt="PonderDeck" width="112" height="112"></a>
+        <a href="/apps/#coach-duo"><img class="app-icon" src="/apps/icons/coach-duo.svg" alt="Coach Duo" width="112" height="112"></a>
+        <a href="/apps/#eaves"><img class="app-icon" src="/apps/icons/eaves.svg" alt="Eaves: Home Upkeep" width="112" height="112"></a>
+        <p class="tag">Five apps on the way to the App Store</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <section class="section" aria-labelledby="apps-title">
+    <div class="wrap">
+      <p class="eyebrow">iOS Apps</p>
+      <h2 class="section-title" id="apps-title">Coming soon to the App Store</h2>
+      <p class="section-lede">Each app gets its own care, its own look, and a clear privacy policy before it ships.</p>
+      <ul class="apps-row">
+        <li><a href="/apps/#duo-dash" style="--app:#c0392b"><img class="app-icon" src="/apps/icons/duo-dash.svg" alt="" width="64" height="64"><h3>Duo Dash</h3><p>Head-to-head minigames for two players on one phone.</p><span><span class="badge">In App Review</span></span></a></li>
+        <li><a href="/apps/#hushhead" style="--app:#b3383c"><img class="app-icon" src="/apps/icons/hushhead.svg" alt="" width="64" height="64"><h3>HushHead</h3><p>A private migraine diary that stays on your iPhone.</p><span><span class="badge">TestFlight beta</span></span></a></li>
+        <li><a href="/apps/#ponderdeck" style="--app:#f2643c"><img class="app-icon" src="/apps/icons/ponderdeck.svg" alt="" width="64" height="64"><h3>PonderDeck</h3><p>Conversation cards for couples, friends, and family.</p><span><span class="badge">TestFlight beta</span></span></a></li>
+        <li><a href="/apps/#coach-duo" style="--app:#2e9a5e"><img class="app-icon" src="/apps/icons/coach-duo.svg" alt="" width="64" height="64"><h3>Coach Duo</h3><p>Game-day lineups and fair playing time for youth soccer.</p><span><span class="badge">TestFlight beta</span></span></a></li>
+        <li><a href="/apps/#eaves" style="--app:#c9a86a"><img class="app-icon" src="/apps/icons/eaves.svg" alt="" width="64" height="64"><h3>Eaves</h3><p>A private home maintenance planner for iPhone, iPad, and Mac.</p><span><span class="badge">TestFlight beta</span></span></a></li>
+      </ul>
+      <a class="btn btn-dark" href="/apps/">All apps, privacy &amp; support <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
 
-    <section id="about">
-      <p class="section-label">About</p>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I grew up in South Florida and landed in Durham, NC in 2014. I've been writing code in some form since before I had a degree for it — which I eventually got in Software Design from Durham Tech.</p>
-          <p>Outside of coding I'm into hockey, bourbon, cooking.</p>
+  <section class="section values" aria-labelledby="values-title">
+    <div class="wrap">
+      <p class="eyebrow">How I build</p>
+      <h2 class="section-title" id="values-title">Apps I'd want on my own phone</h2>
+      <ul>
+        <li><div class="n grad-text">01</div><h3>Private by default</h3><p>No ads and no tracking. Your data lives on your own devices and in your own iCloud, and every app has a plain-English privacy policy.</p></li>
+        <li><div class="n grad-text">02</div><h3>Pay once when possible</h3><p>Free to try, with a one-time unlock instead of another monthly subscription.</p></li>
+        <li><div class="n grad-text">03</div><h3>Made for every iPhone</h3><p>Built for the whole lineup, with extra touches when a device can do more, like the iPhone Duo.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title" id="about-title">Hi, I'm Robert.</h2>
+      <div class="grid">
+        <div class="text">
+          <p>I grew up in South Florida and landed in Durham, NC in 2014. I've been writing code in some form since before I had a degree for it, which I eventually got in Software Design from Durham Tech.</p>
+          <p>These days I build iOS apps in my spare time, mostly to solve problems my own family runs into. Outside of coding I'm into hockey, bourbon, and cooking.</p>
         </div>
         <div>
-          <p class="section-label" style="margin-bottom: 1rem;">Tools I reach for</p>
-          <div class="pills">
-            <span class="pill">Swift</span>
-            <span class="pill">SwiftUI</span>
-            <span class="pill">React</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">REST APIs</span>
-            <span class="pill">Tailwind</span>
-            <span class="pill">Git</span>
-          </div>
+          <h3>Tools I reach for</h3>
+          <ul class="pills">
+            <li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>CloudKit</li><li>StoreKit</li><li>WidgetKit</li><li>React</li><li>Node.js</li><li>Git</li>
+          </ul>
         </div>
       </div>
-    </section>
-    <footer>
-      <span class="footer-text">© 2026 Robert Childs · Durham, NC</span>
-    </footer>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="brand"><img src="/assets/logo-128.png" alt="" width="28" height="28">Robert Childs</span>
+    <ul>
+      <li><a href="/apps/">Apps</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <span>&copy; 2026 Robert Childs &middot; Durham, NC</span>
   </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iOS Apps | Robert Childs</title>
+<meta name="description" content="iOS apps by Robert Childs: Duo Dash, HushHead, PonderDeck, Coach Duo, and Eaves. Find each app's privacy policy and support page.">
+<link rel="canonical" href="https://robertchilds.dev/apps/">
+<meta property="og:title" content="iOS Apps | Robert Childs">
+<meta property="og:description" content="Focused, private iOS apps, with privacy and support pages for each.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertchilds.dev/apps/">
+<meta property="og:image" content="https://robertchilds.dev/assets/logo-512.png">
+<meta name="theme-color" content="#0e0e10">
+<link rel="icon" type="image/png" href="/assets/logo-128.png">
+<link rel="apple-touch-icon" href="/assets/logo-512.png">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .page-head { background: var(--ink); color: var(--on-ink); position: relative; overflow: hidden; }
+  .page-head::before { content: ""; position: absolute; width: 620px; height: 620px; right: -200px; top: -300px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,90,54,.26), rgba(255,45,138,.10) 55%, transparent); pointer-events: none; }
+  .page-head .wrap { position: relative; padding-top: 80px; padding-bottom: 72px; }
+  .page-head .eyebrow { color: var(--on-ink-muted); }
+  .page-head h1 { font: 600 clamp(2.6rem, 6vw, 4.2rem)/1.03 var(--serif); letter-spacing: -.03em; margin: 0 0 18px; }
+  .page-head p { color: var(--on-ink-muted); font-size: 1.12rem; max-width: 54ch; margin: 0; }
+  .jump { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 32px 0 0; padding: 0; }
+  .jump a { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); color: var(--on-ink); text-decoration: none; font-size: .92rem; font-weight: 500; }
+  .jump a:hover { background: rgba(255,255,255,.07); }
+  .jump img { width: 28px; height: 28px; border-radius: 7px; }
+
+  .list { list-style: none; margin: 0; padding: 64px 0 96px; display: grid; gap: 20px; }
+  .app { --app: var(--orange); position: relative; display: grid; gap: 22px 32px; align-items: start; padding: 32px; background: var(--card); border: 1px solid var(--line); border-radius: 28px; scroll-margin-top: 88px; overflow: hidden; }
+  .app::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--app); }
+  @media (min-width: 720px) { .app { grid-template-columns: 128px 1fr; padding: 36px 40px; } }
+  .app .app-icon { width: 128px; height: 128px; }
+  @media (max-width: 719px) { .app .app-icon { width: 88px; height: 88px; } .app { padding: 26px 24px; } }
+  .app .top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 6px; }
+  .app h2 { font: 600 clamp(1.6rem, 3vw, 2rem)/1.15 var(--serif); letter-spacing: -.015em; margin: 0; }
+  .app .meta { color: var(--muted); font-size: .92rem; margin: 0 0 14px; }
+  .app .desc { margin: 0 0 18px; max-width: 62ch; }
+  .app .feats { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .app .feats li { font-size: .86rem; padding: 6px 12px; border-radius: 999px; background: color-mix(in srgb, var(--app) 10%, transparent); border: 1px solid color-mix(in srgb, var(--app) 26%, transparent); }
+  .app .links { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-top: 20px; border-top: 1px solid var(--line); }
+  .app .links a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: .93rem; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line-strong); }
+  .app .links a:hover { background: color-mix(in srgb, var(--app) 12%, transparent); border-color: color-mix(in srgb, var(--app) 50%, transparent); }
+  .app .links .note { color: var(--muted); font-size: .9rem; }
+  .app .links svg { width: 16px; height: 16px; }
+
+  .help { padding: 0 0 96px; }
+  .help .box { border-radius: 28px; padding: 36px 40px; background: var(--ink); color: var(--on-ink); display: grid; gap: 16px 40px; align-items: center; }
+  @media (min-width: 800px) { .help .box { grid-template-columns: 1fr auto; } }
+  .help h2 { font: 600 1.7rem/1.2 var(--serif); margin: 0 0 6px; }
+  .help p { margin: 0; color: var(--on-ink-muted); }
+  .help .bar { grid-column: 1 / -1; height: 3px; border-radius: 3px; background: var(--grad); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="home" href="/"><img src="/assets/logo-128.png" alt="" width="34" height="34">Robert Childs</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/apps/" aria-current="page">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">iOS Apps</p>
+      <h1>Apps, <span class="grad-text">coming soon.</span></h1>
+      <p>Five iPhone apps in the works, each private by design. You will find every app's privacy policy and support page right here.</p>
+      <ul class="jump" aria-label="Jump to an app">
+        <li><a href="#duo-dash"><img src="/apps/icons/duo-dash.svg" alt="" width="28" height="28">Duo Dash</a></li>
+        <li><a href="#hushhead"><img src="/apps/icons/hushhead.svg" alt="" width="28" height="28">HushHead</a></li>
+        <li><a href="#ponderdeck"><img src="/apps/icons/ponderdeck.svg" alt="" width="28" height="28">PonderDeck</a></li>
+        <li><a href="#coach-duo"><img src="/apps/icons/coach-duo.svg" alt="" width="28" height="28">Coach Duo</a></li>
+        <li><a href="#eaves"><img src="/apps/icons/eaves.svg" alt="" width="28" height="28">Eaves</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <ul class="list">
+
+      <li class="app" id="duo-dash" style="--app:#c0392b">
+        <img class="app-icon" src="/apps/icons/duo-dash.svg" alt="Duo Dash app icon" width="128" height="128">
+        <div>
+          <div class="top"><h2>Duo Dash</h2><span class="badge">In App Review</span></div>
+          <p class="meta">Games &middot; iPhone, iPad, iPhone Duo</p>
+          <p class="desc">A pack of quick head-to-head minigames for two players on one device. Split the screen, face off, and settle it in seconds.</p>
+          <ul class="feats"><li>Two players, one phone</li><li>Quick rounds</li><li>iPhone Duo enhanced</li></ul>
+          <div class="links">
+            <a href="/duo-dash/privacy/">Privacy Policy</a>
+            <a href="/duo-dash/support/">Support</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="app" id="hushhead" style="--app:#b3383c">
+        <img class="app-icon" src="/apps/icons/hushhead.svg" alt="HushHead app icon" width="128" height="128">
+        <div>
+          <div class="top"><h2>HushHead: Migraine Log</h2><span class="badge">TestFlight beta</span></div>
+          <p class="meta">Health &amp; Fitness &middot; iPhone</p>
+          <p class="desc">A private migraine diary that stays on your iPhone. Log an attack in seconds, see patterns alongside barometric pressure, and share a clean PDF report with your doctor.</p>
+          <ul class="feats"><li>Data stays on device</li><li>Low-light red mode</li><li>Doctor-ready PDF reports</li></ul>
+          <div class="links">
+            <a href="/hushhead/privacy/">Privacy Policy</a>
+            <a href="/hushhead/support/">Support</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="app" id="ponderdeck" style="--app:#f2643c">
+        <img class="app-icon" src="/apps/icons/ponderdeck.svg" alt="PonderDeck app icon" width="128" height="128">
+        <div>
+          <div class="top"><h2>PonderDeck</h2><span class="badge">TestFlight beta</span></div>
+          <p class="meta">Entertainment &middot; iPhone</p>
+          <p class="desc">Questions worth asking. A conversation card game with curated decks for dates, friends, family, and deeper talks. Start free, then unlock every deck with one purchase.</p>
+          <ul class="feats"><li>Curated question decks</li><li>No accounts</li><li>Pay once, no subscription</li></ul>
+          <div class="links">
+            <a href="/ponderdeck/privacy/">Privacy Policy</a>
+            <a href="/ponderdeck/support/">Support</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="app" id="coach-duo" style="--app:#2e9a5e">
+        <img class="app-icon" src="/apps/icons/coach-duo.svg" alt="Coach Duo app icon" width="128" height="128">
+        <div>
+          <div class="top"><h2>Coach Duo</h2><span class="badge">TestFlight beta</span></div>
+          <p class="meta">Sports &middot; iPhone</p>
+          <p class="desc">Game-day help for youth soccer coaches. Build lineups, manage substitutions, and keep playing time fair, with your assistant coach in sync and a view just for parents.</p>
+          <ul class="feats"><li>Lineups &amp; subs</li><li>Fair playing time</li><li>Assistant coach sync</li></ul>
+          <div class="links">
+            <span class="note">Privacy policy and support pages arrive with launch.</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="app" id="eaves" style="--app:#c9a86a">
+        <img class="app-icon" src="/apps/icons/eaves.svg" alt="Eaves app icon" width="128" height="128">
+        <div>
+          <div class="top"><h2>Eaves: Home Upkeep</h2><span class="badge">TestFlight beta</span></div>
+          <p class="meta">Lifestyle &middot; iPhone, iPad, Mac</p>
+          <p class="desc">A calm, private planner for home maintenance. Keep track of filters, gutters, and seasonal chores, with no account required and a single one-time purchase.</p>
+          <ul class="feats"><li>iPhone, iPad &amp; Mac</li><li>No account</li><li>Pay once</li></ul>
+          <div class="links">
+            <span class="note">Privacy policy and support pages arrive with launch.</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <section class="help" aria-labelledby="help-title">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2 id="help-title">Need help with an app?</h2>
+          <p>Every app's support page has answers to common questions and a direct line to me.</p>
+        </div>
+        <a class="btn btn-light" href="mailto:poles_maned_1e@icloud.com?subject=App%20Support">Email support</a>
+        <div class="bar" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="brand"><img src="/assets/logo-128.png" alt="" width="28" height="28">Robert Childs</span>
+    <ul>
+      <li><a href="/apps/">Apps</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <span>&copy; 2026 Robert Childs &middot; Durham, NC</span>
+  </div>
+</footer>
+</body>
+</html>
