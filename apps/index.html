@@ -42,6 +42,8 @@
   .app .links { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-top: 20px; border-top: 1px solid var(--line); }
   .app .links a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: .93rem; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line-strong); }
   .app .links a:hover { background: color-mix(in srgb, var(--app) 12%, transparent); border-color: color-mix(in srgb, var(--app) 50%, transparent); }
+  .app .links a.store { background: var(--app); border-color: var(--app); color: #fff; }
+  .app .links a.store:hover { background: color-mix(in srgb, var(--app) 85%, #000); border-color: color-mix(in srgb, var(--app) 85%, #000); }
   .app .links .note { color: var(--muted); font-size: .9rem; }
   .app .links svg { width: 16px; height: 16px; }
 
@@ -90,11 +92,12 @@
       <li class="app" id="duo-dash" style="--app:#c0392b">
         <img class="app-icon" src="/apps/icons/duo-dash.png" alt="Duo Dash app icon" width="128" height="128">
         <div>
-          <div class="top"><h2>Duo Dash</h2><span class="badge">In App Review</span></div>
+          <div class="top"><h2>Duo Dash</h2><span class="badge">On the App Store</span></div>
           <p class="meta">Games &middot; iPhone, iPad, iPhone Duo</p>
           <p class="desc">A pack of quick head-to-head minigames for two players on one device. Split the screen, face off, and settle it in seconds.</p>
           <ul class="feats"><li>Two players, one phone</li><li>Quick rounds</li><li>iPhone Duo enhanced</li></ul>
           <div class="links">
+            <a class="store" href="https://apps.apple.com/us/app/duo-dash-party-games/id6831210976" target="_blank" rel="noopener">Get it on the App Store <span aria-hidden="true">&rarr;</span></a>
             <a href="/duo-dash/privacy/">Privacy Policy</a>
             <a href="/duo-dash/support/">Support</a>
           </div>
