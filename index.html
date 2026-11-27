@@ -39,6 +39,14 @@
   .apps-row .app-icon { width: 64px; height: 64px; }
   .apps-row h3 { font: 600 1.05rem/1.25 var(--sans); margin: 4px 0 0; }
   .apps-row p { color: var(--muted); font-size: .92rem; line-height: 1.5; margin: 0; flex: 1; }
+  /* iPip badge sits inside the Duo Dash card as a sibling link (links can't nest) */
+  .apps-row .has-ipip { position: relative; }
+  .apps-row .has-ipip > a:first-child { padding-bottom: calc(20px + 56px + 12px); }
+  .apps-row .ipip-badge { position: absolute; left: 20px; bottom: 20px; width: calc(100% - 40px); max-width: 220px; }
+  .apps-row .ipip-badge a { display: block; padding: 0; background: none; border: 0; border-radius: 0; height: auto; }
+  .apps-row .ipip-badge a:hover { transform: translateY(-1px); }
+  .apps-row .ipip-badge img { display: block; width: 100%; height: auto; }
+  @media (max-width: 480px) { .apps-row .has-ipip > a:first-child { padding-bottom: calc(16px + 44px + 10px); } .apps-row .ipip-badge { left: 16px; bottom: 16px; width: calc(100% - 32px); } }
 
   .values { border-top: 1px solid var(--line); }
   .values ul { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 20px; }
@@ -100,7 +108,7 @@
       <h2 class="section-title" id="apps-title">Coming soon to the App Store</h2>
       <p class="section-lede">Each app gets its own care, its own look, and a clear privacy policy before it ships.</p>
       <ul class="apps-row">
-        <li><a href="/apps/#duo-dash" style="--app:#c0392b"><img class="app-icon" src="/apps/icons/duo-dash.png" alt="" width="64" height="64"><h3>Duo Dash</h3><p>Head-to-head minigames for two players on one phone.</p><span><span class="badge">On the App Store</span></span></a></li>
+        <li class="has-ipip"><a href="/apps/#duo-dash" style="--app:#c0392b"><img class="app-icon" src="/apps/icons/duo-dash.png" alt="" width="64" height="64"><h3>Duo Dash</h3><p>Head-to-head minigames for two players on one phone.</p><span><span class="badge">On the App Store</span></span></a><div class="ipip-badge"><a href="https://ipip.fyi/apps/duo-dash?ref=badge"><img src="https://ipip.fyi/badge/duo-dash.svg?theme=dark" alt="Duo Dash on iPip" width="220" height="56"></a></div></li>
         <li><a href="/apps/#hushhead" style="--app:#b9783a"><img class="app-icon" src="/apps/icons/hushhead.png" alt="" width="64" height="64"><h3>HushHead</h3><p>A private migraine diary that stays on your iPhone.</p><span><span class="badge">TestFlight beta</span></span></a></li>
         <li><a href="/apps/#ponderdeck" style="--app:#f2643c"><img class="app-icon" src="/apps/icons/ponderdeck.png" alt="" width="64" height="64"><h3>PonderDeck</h3><p>Conversation cards for couples, friends, and family.</p><span><span class="badge">TestFlight beta</span></span></a></li>
         <li><a href="/apps/#coach-duo" style="--app:#2e9a5e"><img class="app-icon" src="/apps/icons/coach-duo.svg" alt="" width="64" height="64"><h3>Coach Duo</h3><p>Game-day lineups and fair playing time for youth soccer.</p><span><span class="badge">TestFlight beta</span></span></a></li>
