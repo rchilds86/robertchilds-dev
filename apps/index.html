@@ -46,6 +46,10 @@
   .app .links a.store:hover { background: color-mix(in srgb, var(--app) 85%, #000); border-color: color-mix(in srgb, var(--app) 85%, #000); }
   .app .links .note { color: var(--muted); font-size: .9rem; }
   .app .links svg { width: 16px; height: 16px; }
+  .app .ipip-badge { margin: 0 0 24px; }
+  .app .ipip-badge a { display: inline-block; transition: transform .15s; }
+  .app .ipip-badge a:hover { transform: translateY(-1px); }
+  .app .ipip-badge img { display: block; max-width: 100%; height: auto; }
 
   .help { padding: 0 0 96px; }
   .help .box { border-radius: 28px; padding: 36px 40px; background: var(--ink); color: var(--on-ink); display: grid; gap: 16px 40px; align-items: center; }
@@ -96,6 +100,7 @@
           <p class="meta">Games &middot; iPhone, iPad, iPhone Duo</p>
           <p class="desc">A pack of quick head-to-head minigames for two players on one device. Split the screen, face off, and settle it in seconds.</p>
           <ul class="feats"><li>Two players, one phone</li><li>Quick rounds</li><li>iPhone Duo enhanced</li></ul>
+          <div class="ipip-badge"><a href="https://ipip.fyi/apps/duo-dash?ref=badge"><img src="https://ipip.fyi/badge/duo-dash.svg?theme=dark" alt="Duo Dash on iPip" width="220" height="56"></a></div>
           <div class="links">
             <a class="store" href="https://apps.apple.com/us/app/duo-dash-party-games/id6831210976" target="_blank" rel="noopener">Get it on the App Store <span aria-hidden="true">&rarr;</span></a>
             <a href="/duo-dash/privacy/">Privacy Policy</a>
